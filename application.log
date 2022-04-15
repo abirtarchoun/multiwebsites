@@ -1,0 +1,400 @@
+2022-04-15 01:59:40,316 INFO  AbstractEntityManagerFactoryBean:648 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-15 01:59:40,467 INFO  ExecutorConfigurationSupport:218 - [] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-04-15 01:59:40,478 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2022-04-15 01:59:40,509 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
+2022-04-15 05:32:53,004 INFO  StartupInfoLogger:55 - [] Starting MultiwebsitesApplication using Java 1.8.0_181 on DESKTOP-CI469KC with PID 29024 (C:\Users\mss\Documents\spring\multiwebsites\target\classes started by mss in C:\Users\mss\Documents\spring\multiwebsites)
+2022-04-15 05:32:53,012 INFO  SpringApplication:660 - [] No active profile set, falling back to default profiles: default
+2022-04-15 05:32:55,448 INFO  RepositoryConfigurationDelegate:128 - [] Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2022-04-15 05:32:55,755 INFO  RepositoryConfigurationDelegate:188 - [] Finished Spring Data repository scanning in 290 ms. Found 16 JPA repository interfaces.
+2022-04-15 05:32:56,565 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 8089 (http)
+2022-04-15 05:32:56,655 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
+2022-04-15 05:32:56,657 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/9.0.39]
+2022-04-15 05:32:56,960 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
+2022-04-15 05:32:56,962 INFO  ServletWebServerApplicationContext:289 - [] Root WebApplicationContext: initialization completed in 3781 ms
+2022-04-15 05:32:57,457 INFO  ExecutorConfigurationSupport:181 - [] Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-15 05:32:57,528 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-15 05:32:57,601 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.4.23.Final
+2022-04-15 05:32:57,897 WARN  AbstractApplicationContext:596 - [] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'flickrImpl' defined in file [C:\Users\mss\Documents\spring\multiwebsites\target\classes\app\igesa\metiers\FlickrImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.flickr4java.flickr.Flickr' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2022-04-15 05:32:57,898 INFO  AbstractEntityManagerFactoryBean:648 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-15 05:32:58,141 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-15 05:32:58,318 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2022-04-15 05:32:59,371 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2022-04-15 05:32:59,394 INFO  Dialect:170 - [] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-04-15 05:33:01,212 WARN  ExceptionHandlerLoggedImpl:27 - [] GenerationTarget encountered exception accepting command : Error executing DDL "alter table configuration_translation drop constraint FKj9sq27jw1hnm81fnybo4wiwu5" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table configuration_translation drop constraint FKj9sq27jw1hnm81fnybo4wiwu5" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:375)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:359)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:331)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:230)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:154)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:126)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:145)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:316)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:469)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.postgresql.util.PSQLException: ERREUR: la contrainte « fkj9sq27jw1hnm81fnybo4wiwu5 » de la relation « configuration_translation » n'existe pas
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:279)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 19 common frames omitted
+2022-04-15 05:33:01,215 WARN  ExceptionHandlerLoggedImpl:27 - [] GenerationTarget encountered exception accepting command : Error executing DDL "alter table configuration_translation drop constraint FKkk9kynm7jb4hn2kkyibar0bgt" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table configuration_translation drop constraint FKkk9kynm7jb4hn2kkyibar0bgt" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:375)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:359)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:331)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:230)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:154)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:126)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:145)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:316)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:469)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.postgresql.util.PSQLException: ERREUR: la contrainte « fkkk9kynm7jb4hn2kkyibar0bgt » de la relation « configuration_translation » n'existe pas
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:279)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 19 common frames omitted
+2022-04-15 05:33:01,228 WARN  ExceptionHandlerLoggedImpl:27 - [] GenerationTarget encountered exception accepting command : Error executing DDL "alter table pages_translations drop constraint FKfu0ej7o7nn2573koab31fjrct" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table pages_translations drop constraint FKfu0ej7o7nn2573koab31fjrct" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:375)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:359)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:331)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:230)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:154)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:126)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:145)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:316)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:469)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.postgresql.util.PSQLException: ERREUR: la contrainte « fkfu0ej7o7nn2573koab31fjrct » de la relation « pages_translations » n'existe pas
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:279)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 19 common frames omitted
+2022-04-15 05:33:01,238 WARN  ExceptionHandlerLoggedImpl:27 - [] GenerationTarget encountered exception accepting command : Error executing DDL "alter table post_translation drop constraint FK918cv1v5x5vs2uuescygypo58" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table post_translation drop constraint FK918cv1v5x5vs2uuescygypo58" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:375)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:359)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:331)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:230)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:154)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:126)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:145)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:316)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:469)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.postgresql.util.PSQLException: ERREUR: la contrainte « fk918cv1v5x5vs2uuescygypo58 » de la relation « post_translation » n'existe pas
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:279)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 19 common frames omitted
+2022-04-15 05:33:01,249 WARN  ExceptionHandlerLoggedImpl:27 - [] GenerationTarget encountered exception accepting command : Error executing DDL "alter table product_translation drop constraint FKq8ihrhxqednwb0h0yynpca989" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table product_translation drop constraint FKq8ihrhxqednwb0h0yynpca989" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:375)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:359)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:331)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:230)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:154)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:126)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:145)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:316)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:469)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.postgresql.util.PSQLException: ERREUR: la contrainte « fkq8ihrhxqednwb0h0yynpca989 » de la relation « product_translation » n'existe pas
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:279)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 19 common frames omitted
+2022-04-15 05:33:01,254 WARN  ExceptionHandlerLoggedImpl:27 - [] GenerationTarget encountered exception accepting command : Error executing DDL "alter table tags_translation drop constraint FKddhib345mj89pj9ljyuhl1g9x" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table tags_translation drop constraint FKddhib345mj89pj9ljyuhl1g9x" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:375)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:359)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:331)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:230)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:154)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:126)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:145)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:316)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:469)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.postgresql.util.PSQLException: ERREUR: la contrainte « fkddhib345mj89pj9ljyuhl1g9x » de la relation « tags_translation » n'existe pas
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:279)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 19 common frames omitted
+2022-04-15 05:33:02,544 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-15 05:33:02,557 INFO  AbstractEntityManagerFactoryBean:434 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-15 05:33:02,563 INFO  ExecutorConfigurationSupport:218 - [] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-04-15 05:33:02,565 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2022-04-15 05:33:02,582 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
+2022-04-15 05:33:02,586 INFO  DirectJDKLog:173 - [] Stopping service [Tomcat]
+2022-04-15 05:33:02,652 INFO  ConditionEvaluationReportLoggingListener:136 - [] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-04-15 05:33:02,802 ERROR LoggingFailureAnalysisReporter:40 - [] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in app.igesa.metiers.FlickrImpl required a bean of type 'com.flickr4java.flickr.Flickr' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.flickr4java.flickr.Flickr' in your configuration.
+
+2022-04-15 05:36:15,201 INFO  StartupInfoLogger:55 - [] Starting MultiwebsitesApplication using Java 1.8.0_181 on DESKTOP-CI469KC with PID 23620 (C:\Users\mss\Documents\spring\multiwebsites\target\classes started by mss in C:\Users\mss\Documents\spring\multiwebsites)
+2022-04-15 05:36:15,208 INFO  SpringApplication:660 - [] No active profile set, falling back to default profiles: default
+2022-04-15 05:36:17,929 INFO  RepositoryConfigurationDelegate:128 - [] Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2022-04-15 05:36:18,500 INFO  RepositoryConfigurationDelegate:188 - [] Finished Spring Data repository scanning in 540 ms. Found 16 JPA repository interfaces.
+2022-04-15 05:36:19,534 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 8089 (http)
+2022-04-15 05:36:19,596 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
+2022-04-15 05:36:19,599 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/9.0.39]
+2022-04-15 05:36:19,909 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
+2022-04-15 05:36:19,911 INFO  ServletWebServerApplicationContext:289 - [] Root WebApplicationContext: initialization completed in 4597 ms
+2022-04-15 05:36:20,371 INFO  ExecutorConfigurationSupport:181 - [] Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-15 05:36:20,449 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-15 05:36:20,525 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.4.23.Final
+2022-04-15 05:36:20,808 WARN  AbstractApplicationContext:596 - [] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'flickrImpl' defined in file [C:\Users\mss\Documents\spring\multiwebsites\target\classes\app\igesa\metiers\FlickrImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.flickr4java.flickr.Flickr' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2022-04-15 05:36:20,812 INFO  AbstractEntityManagerFactoryBean:648 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-15 05:36:20,992 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-15 05:36:21,124 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2022-04-15 05:36:21,895 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2022-04-15 05:36:21,928 INFO  Dialect:170 - [] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-04-15 05:36:24,617 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-15 05:36:24,633 INFO  AbstractEntityManagerFactoryBean:434 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-15 05:36:24,640 INFO  ExecutorConfigurationSupport:218 - [] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-04-15 05:36:24,642 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2022-04-15 05:36:24,665 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
+2022-04-15 05:36:24,670 INFO  DirectJDKLog:173 - [] Stopping service [Tomcat]
+2022-04-15 05:36:24,770 INFO  ConditionEvaluationReportLoggingListener:136 - [] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-04-15 05:36:24,859 ERROR LoggingFailureAnalysisReporter:40 - [] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in app.igesa.metiers.FlickrImpl required a bean of type 'com.flickr4java.flickr.Flickr' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.flickr4java.flickr.Flickr' in your configuration.
+
+2022-04-15 05:42:46,257 INFO  StartupInfoLogger:55 - [] Starting MultiwebsitesApplication using Java 1.8.0_181 on DESKTOP-CI469KC with PID 14008 (C:\Users\mss\Documents\spring\multiwebsites\target\classes started by mss in C:\Users\mss\Documents\spring\multiwebsites)
+2022-04-15 05:42:46,264 INFO  SpringApplication:660 - [] No active profile set, falling back to default profiles: default
+2022-04-15 05:42:49,060 INFO  RepositoryConfigurationDelegate:128 - [] Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2022-04-15 05:42:49,364 INFO  RepositoryConfigurationDelegate:188 - [] Finished Spring Data repository scanning in 281 ms. Found 16 JPA repository interfaces.
+2022-04-15 05:42:50,236 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 8089 (http)
+2022-04-15 05:42:50,255 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
+2022-04-15 05:42:50,256 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/9.0.39]
+2022-04-15 05:42:50,548 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
+2022-04-15 05:42:50,550 INFO  ServletWebServerApplicationContext:289 - [] Root WebApplicationContext: initialization completed in 4179 ms
+2022-04-15 05:42:51,123 INFO  ExecutorConfigurationSupport:181 - [] Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-15 05:42:51,199 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-15 05:42:51,288 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.4.23.Final
+2022-04-15 05:42:51,671 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-15 05:42:51,863 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2022-04-15 05:42:51,896 WARN  JpaBaseConfiguration$JpaWebConfiguration:221 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-15 05:42:52,551 INFO  EndpointLinksResolver:58 - [] Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-04-15 05:42:52,750 INFO  PropertySourcedRequestMappingHandlerMapping:69 - [] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-04-15 05:42:53,133 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2022-04-15 05:42:53,164 INFO  Dialect:170 - [] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-04-15 05:42:55,783 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-15 05:42:55,809 INFO  AbstractEntityManagerFactoryBean:434 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-15 05:42:56,682 INFO  TomcatWebServer:220 - [] Tomcat started on port(s): 8089 (http) with context path ''
+2022-04-15 05:42:56,686 INFO  DocumentationPluginsBootstrapper:160 - [] Context refreshed
+2022-04-15 05:42:56,746 INFO  DocumentationPluginsBootstrapper:163 - [] Found 1 custom documentation plugin(s)
+2022-04-15 05:42:56,896 INFO  ApiListingReferenceScanner:41 - [] Scanning for api listing references
+2022-04-15 05:42:57,202 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: deleteUsingDELETE_1
+2022-04-15 05:42:57,206 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: findByIdUsingGET_1
+2022-04-15 05:42:57,211 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: saveUsingPOST_1
+2022-04-15 05:42:57,219 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: updateUsingPUT_1
+2022-04-15 05:42:57,227 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: viewUsingGET_1
+2022-04-15 05:42:57,283 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: deleteUsingDELETE_2
+2022-04-15 05:42:57,291 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: findByIdUsingGET_2
+2022-04-15 05:42:57,325 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: saveUsingPOST_2
+2022-04-15 05:42:57,330 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: updateUsingPUT_2
+2022-04-15 05:42:57,336 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: viewUsingGET_2
+2022-04-15 05:42:57,425 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: deleteUsingDELETE_3
+2022-04-15 05:42:57,446 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: findByIdUsingGET_3
+2022-04-15 05:42:57,456 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: saveUsingPOST_3
+2022-04-15 05:42:57,461 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: updateUsingPUT_3
+2022-04-15 05:42:57,467 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: viewUsingGET_3
+2022-04-15 05:42:57,479 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: deleteUsingDELETE_4
+2022-04-15 05:42:57,524 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: findByIdUsingGET_4
+2022-04-15 05:42:57,537 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: saveUsingPOST_4
+2022-04-15 05:42:57,544 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: updateUsingPUT_4
+2022-04-15 05:42:57,548 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: viewUsingGET_4
+2022-04-15 05:42:57,556 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: deleteUsingDELETE_5
+2022-04-15 05:42:57,571 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: findByIdUsingGET_5
+2022-04-15 05:42:57,580 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: saveUsingPOST_5
+2022-04-15 05:42:57,589 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: updateUsingPUT_5
+2022-04-15 05:42:57,594 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: viewUsingGET_5
+2022-04-15 05:42:57,622 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: deleteUsingDELETE_6
+2022-04-15 05:42:57,626 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: findByIdUsingGET_6
+2022-04-15 05:42:57,632 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: saveUsingPOST_6
+2022-04-15 05:42:57,636 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: updateUsingPUT_6
+2022-04-15 05:42:57,650 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: viewUsingGET_6
+2022-04-15 05:42:57,674 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: deleteUsingDELETE_7
+2022-04-15 05:42:57,708 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: findByIdUsingGET_7
+2022-04-15 05:42:57,714 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: saveUsingPOST_7
+2022-04-15 05:42:57,718 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: updateUsingPUT_7
+2022-04-15 05:42:57,724 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: viewUsingGET_7
+2022-04-15 05:42:57,734 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: deleteUsingDELETE_8
+2022-04-15 05:42:57,741 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: findByIdUsingGET_8
+2022-04-15 05:42:57,749 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: saveUsingPOST_8
+2022-04-15 05:42:57,752 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: updateUsingPUT_8
+2022-04-15 05:42:57,758 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: viewUsingGET_8
+2022-04-15 05:42:57,816 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: deleteUsingDELETE_9
+2022-04-15 05:42:57,823 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: findByIdUsingGET_9
+2022-04-15 05:42:57,831 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: saveUsingPOST_9
+2022-04-15 05:42:57,835 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: updateUsingPUT_9
+2022-04-15 05:42:57,838 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: viewUsingGET_9
+2022-04-15 05:42:57,857 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: deleteUsingDELETE_10
+2022-04-15 05:42:57,861 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: findByIdUsingGET_10
+2022-04-15 05:42:57,892 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: saveUsingPOST_10
+2022-04-15 05:42:57,921 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: updateUsingPUT_10
+2022-04-15 05:42:57,942 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: viewUsingGET_10
+2022-04-15 05:42:57,972 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: deleteUsingDELETE_11
+2022-04-15 05:42:57,980 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: findByIdUsingGET_11
+2022-04-15 05:42:57,995 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: saveUsingPOST_11
+2022-04-15 05:42:57,999 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: updateUsingPUT_11
+2022-04-15 05:42:58,010 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: viewUsingGET_11
+2022-04-15 05:42:58,018 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: deleteUsingDELETE_12
+2022-04-15 05:42:58,027 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: findByIdUsingGET_12
+2022-04-15 05:42:58,033 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: saveUsingPOST_12
+2022-04-15 05:42:58,053 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: updateUsingPUT_12
+2022-04-15 05:42:58,058 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: viewUsingGET_12
+2022-04-15 05:42:58,063 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: deleteUsingDELETE_13
+2022-04-15 05:42:58,072 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: findByIdUsingGET_13
+2022-04-15 05:42:58,076 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: saveUsingPOST_13
+2022-04-15 05:42:58,078 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: updateUsingPUT_13
+2022-04-15 05:42:58,081 INFO  CachingOperationNameGenerator:40 - [] Generating unique operation named: viewUsingGET_13
+2022-04-15 05:42:58,112 INFO  DeferredRepositoryInitializationListener:51 - [] Triggering deferred initialization of Spring Data repositories…
+2022-04-15 05:42:59,629 INFO  DeferredRepositoryInitializationListener:55 - [] Spring Data repositories initialized!
+2022-04-15 05:42:59,652 INFO  StartupInfoLogger:61 - [] Started MultiwebsitesApplication in 14.506 seconds (JVM running for 18.301)
+2022-04-15 05:43:00,920 INFO  DirectJDKLog:173 - [] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-15 05:43:00,921 INFO  FrameworkServlet:525 - [] Initializing Servlet 'dispatcherServlet'
+2022-04-15 05:43:00,924 INFO  FrameworkServlet:547 - [] Completed initialization in 3 ms

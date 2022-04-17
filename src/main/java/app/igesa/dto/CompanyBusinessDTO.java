@@ -2,6 +2,7 @@ package app.igesa.dto;
 
 import java.util.List;
 
+import app.igesa.entity.Auditable;
 import app.igesa.entity.CompanyBusiness;
 import app.igesa.entity.Entreprise;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -31,6 +32,7 @@ public class CompanyBusinessDTO {
 				.id(company.getId())
 				.description(company.getDescription())
 				.domainename(company.getDomainename())
+
 				.build();
 	}
 

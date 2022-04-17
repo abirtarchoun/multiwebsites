@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Builder
 @Table(name="CompanyBusiness")
-public class CompanyBusiness {
+public class CompanyBusiness extends Auditable<String> {
 
 
 	@Id

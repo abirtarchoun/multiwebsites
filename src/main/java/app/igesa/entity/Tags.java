@@ -15,7 +15,7 @@ import java.util.List;
 @Data
 @Entity
 @Table(name="Tags")
-public class Tags {
+public class Tags extends Auditable<String> {
 	
 	@Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)

@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Builder;
 import lombok.Data;
 import java.util.List;
-
+/*
 
 @Data
 @Builder
@@ -39,4 +39,4 @@ public class RoleDTO {
 		return role;
 	}
 
-}
+}*/

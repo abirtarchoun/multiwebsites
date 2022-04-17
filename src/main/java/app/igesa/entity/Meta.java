@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 @Table(name="Meta")
-public class Meta {
+public class Meta  extends Auditable<String>{
 	
 	@Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)

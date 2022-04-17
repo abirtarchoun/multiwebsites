@@ -4,11 +4,11 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import app.igesa.dto.RoleDTO;
 import app.igesa.enumerations.ErrorCode;
 import app.igesa.exceptions.InvalideEntityException;
 import app.igesa.exceptions.ResourceNotFoundException;
-import app.igesa.validators.RoleValidator;
+import app.igesa.repository.RoleRepository;
+//import app.igesa.validators.RoleValidator;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.slf4j.Logger;
@@ -16,7 +16,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import app.igesa.entity.Role;
-import app.igesa.repository.IroleRepository;
+/*
 @AllArgsConstructor
 @NoArgsConstructor
 @Service
@@ -24,7 +24,7 @@ public class RoleImpl {
 
 
     @Autowired
-    private IroleRepository roleRepository;
+    private RoleRepository roleRepository;
     private static final Logger log = LoggerFactory.getLogger(RoleImpl.class);
 
    
@@ -75,6 +75,6 @@ public class RoleImpl {
 
 
 }
-
+*/
 
 

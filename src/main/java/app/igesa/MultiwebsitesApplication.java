@@ -6,9 +6,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import app.igesa.metiers.AuditorAwareImpl;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-@SpringBootApplication
 @EnableJpaAuditing(auditorAwareRef = "auditorAware")
+@SpringBootApplication
 public class MultiwebsitesApplication {
 
 

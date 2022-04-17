@@ -1,6 +1,4 @@
-package app.igesa.controller;
-import app.igesa.dto.RoleDTO;
-import app.igesa.metiers.RoleImpl;
+
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -13,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.Collection;
 import java.util.Optional;
-
+/*
 @RestController
 @Api(tags = "ROLE")
 public class RoleController {
@@ -99,4 +97,5 @@ public class RoleController {
 
 
 
-}
+
+*/

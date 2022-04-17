@@ -16,7 +16,7 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 @Table(name="Pages")
-public class Pages {
+public class Pages extends Auditable<String>{
 	@Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
 	private Long id ;

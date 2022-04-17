@@ -1,5 +1,5 @@
 package app.igesa.validators;
-
+/*
 import app.igesa.dto.EntrepriseDTO;
 import app.igesa.dto.RoleDTO;
 import org.springframework.util.StringUtils;
@@ -30,4 +30,4 @@ public class RoleValidator {
         return errors;
     }
 
-}
+}*/

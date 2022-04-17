@@ -1,15 +1,10 @@
 package app.igesa.dto;
 
-import java.security.cert.CertPathBuilder;
 import java.util.List;
-
-import app.igesa.entity.Role;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import app.igesa.entity.Groupe;
 import lombok.Builder;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 @Data
 @Builder
@@ -25,9 +20,7 @@ public class GroupeDTO  {
     @JsonIgnore
     private List<EntrepriseDTO>entreprise ;
     @JsonIgnore
-    private List<AccountDTO>accounts;
-    @JsonIgnore
-    private List<RoleDTO>role;
+   // private List<RoleDTO>role;
 
 
 

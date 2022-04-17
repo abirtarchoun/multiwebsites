@@ -6,53 +6,62 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+import java.util.HashSet;
+import java.util.Set;
+
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-@Table(name="Account")
+@Entity@Table(	name = "accounts",
+        uniqueConstraints = {
+                @UniqueConstraint(columnNames = "username"),
+                @UniqueConstraint(columnNames = "email")
+        })
 public class Account {
+
+    private static final long serialVersionUID = 65981149772133526L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id ;
+    private Long id;
 
-    @Column(name = "Username")
-    private String username ;
+    @NotBlank
+    private String username;
 
-    @Column(name = "Firsname")
-    private String Firstname;
-
-    @Column(name = "Lastname")
-    private String Lastname;
-
-    @Column(name = "Password")
+    @Email
+    private String email;
+    @NotBlank
     private String password;
 
-    @Column(name = "Datebirth")
-    private LocalDate Datebirth ;
+    @NotBlank
+    private String matchingPassword;
 
-    @Column(name = "CodeFiscale")
-    private String fiscaleCode;
+    private String fiscaleCode ;
 
-    @Column(name = "BarreCode")
-    private String bareCode ;
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(	name = "account_roles",
+            joinColumns = @JoinColumn(name = "account_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Set<Role> roles = new HashSet<>();
 
-    @Column(name = "Email")
-    private String email ;
 
+ public Account( String username, String email, String password, String matchingPassword, String fiscaleCode){
+     super();
+     this.username=username;
+     this.email=email;
+     this.password=password;
+     this.matchingPassword=matchingPassword;
+     this.fiscaleCode=fiscaleCode;
+ }
 
-    /******************** relation *************************/
-
-    @ManyToOne(cascade=CascadeType.ALL)
+   @ManyToOne(cascade=CascadeType.ALL)
     @JoinColumn(name = "groupe_id")
     private Groupe groupe ;
-
-    @ManyToOne(cascade=CascadeType.ALL)
-    @JoinColumn(name = "role_id")
-    private Role role ;
-
 
 
 }

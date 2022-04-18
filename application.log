@@ -2,3 +2,38 @@
 2022-04-18 00:43:50,020 ERROR AuthEntryPointJwt:22 - [] Unauthorized error: Bad credentials
 2022-04-18 01:57:32,206 WARN  ResourceBundleMessageSource:220 - [] ResourceBundle [i18n/messages] not found for MessageSource: Can't find bundle for base name i18n/messages, locale en_US
 2022-04-18 01:57:32,238 ERROR AuthEntryPointJwt:22 - [] Unauthorized error: Bad credentials
+2022-04-18 03:57:37,733 INFO  AbstractEntityManagerFactoryBean:648 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-18 03:57:37,829 INFO  ExecutorConfigurationSupport:218 - [] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-04-18 03:57:37,832 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2022-04-18 03:57:37,885 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
+2022-04-18 03:58:01,468 INFO  StartupInfoLogger:55 - [] Starting MultiwebsitesApplication using Java 18 on DESKTOP-CI469KC with PID 21768 (C:\Users\mss\Documents\spring\multiwebsites\target\classes started by mss in C:\Users\mss\Documents\spring\multiwebsites)
+2022-04-18 03:58:01,475 INFO  SpringApplication:660 - [] No active profile set, falling back to default profiles: default
+2022-04-18 03:58:06,137 INFO  RepositoryConfigurationDelegate:128 - [] Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2022-04-18 03:58:06,455 INFO  RepositoryConfigurationDelegate:188 - [] Finished Spring Data repository scanning in 292 ms. Found 17 JPA repository interfaces.
+2022-04-18 03:58:07,252 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350 - [] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@50b93353' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-18 03:58:07,260 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350 - [] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-18 03:58:07,823 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 8089 (http)
+2022-04-18 03:58:07,840 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
+2022-04-18 03:58:07,841 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/9.0.39]
+2022-04-18 03:58:08,045 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
+2022-04-18 03:58:08,048 INFO  ServletWebServerApplicationContext:289 - [] Root WebApplicationContext: initialization completed in 6032 ms
+2022-04-18 03:58:08,524 WARN  JpaBaseConfiguration$JpaWebConfiguration:221 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-18 03:58:09,427 INFO  ExecutorConfigurationSupport:181 - [] Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-18 03:58:09,591 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-18 03:58:09,776 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.4.23.Final
+2022-04-18 03:58:10,051 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-18 03:58:10,342 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2022-04-18 03:58:10,869 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2022-04-18 03:58:10,901 INFO  Dialect:170 - [] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-04-18 03:58:11,537 INFO  EndpointLinksResolver:58 - [] Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-04-18 03:58:12,870 INFO  DefaultSecurityFilterChain:51 - [] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@21c99abf, org.springframework.security.web.context.SecurityContextPersistenceFilter@4ef31221, org.springframework.security.web.header.HeaderWriterFilter@39b85a73, org.springframework.web.filter.CorsFilter@6d6f6ca9, org.springframework.security.web.authentication.logout.LogoutFilter@21c34bf8, app.igesa.security.jwt.AuthTokenFilter@7c5f29c6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1a819901, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@adc8683, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@54496c2d, org.springframework.security.web.session.SessionManagementFilter@7fcc3745, org.springframework.security.web.access.ExceptionTranslationFilter@7c69e1e1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@210d3a42]
+2022-04-18 03:58:15,011 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-18 03:58:15,027 INFO  AbstractEntityManagerFactoryBean:434 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-18 03:58:15,831 INFO  TomcatWebServer:220 - [] Tomcat started on port(s): 8089 (http) with context path ''
+2022-04-18 03:58:18,053 INFO  DeferredRepositoryInitializationListener:51 - [] Triggering deferred initialization of Spring Data repositories…
+2022-04-18 03:58:20,229 INFO  DeferredRepositoryInitializationListener:55 - [] Spring Data repositories initialized!
+2022-04-18 03:58:20,259 INFO  StartupInfoLogger:61 - [] Started MultiwebsitesApplication in 20.783 seconds (JVM running for 24.974)
+2022-04-18 04:08:51,079 INFO  AbstractEntityManagerFactoryBean:648 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-18 04:08:51,081 INFO  ExecutorConfigurationSupport:218 - [] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-04-18 04:08:51,082 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2022-04-18 04:08:51,097 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.

@@ -5,6 +5,7 @@ import app.igesa.entity.ERole;
 import app.igesa.entity.Role;
 import app.igesa.enumerations.ErrorCode;
 import app.igesa.exceptions.InvalideEntityException;
+import app.igesa.metiers.AccountImp;
 import app.igesa.metiers.UserDetailsImpl;
 import app.igesa.payload.request.LoginRequest;
 import app.igesa.payload.request.SignupRequest;
@@ -25,13 +26,14 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/auth")
-public class AuthController {
+public class AuthController  {
 	@Autowired
 	AuthenticationManager authenticationManager;
 
@@ -86,7 +88,7 @@ public class AuthController {
 		// Create new user's account
 		Account user = new Account(signUpRequest.getUsername(),
 							 signUpRequest.getEmail(),
-							 encoder.encode(signUpRequest.getPassword()), signUpRequest.getMatchingPassword(), signUpRequest.getFiscaleCode());
+							 encoder.encode(signUpRequest.getPassword()), encoder.encode(signUpRequest.getMatchingPassword()), signUpRequest.getFiscaleCode());
 
 
 
@@ -124,4 +126,6 @@ public class AuthController {
 
 		return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
 	}
+
+
 }

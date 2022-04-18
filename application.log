@@ -64,3 +64,99 @@
 2022-04-18 04:58:44,132 INFO  DeferredRepositoryInitializationListener:51 - [] Triggering deferred initialization of Spring Data repositories…
 2022-04-18 04:58:45,264 INFO  DeferredRepositoryInitializationListener:55 - [] Spring Data repositories initialized!
 2022-04-18 04:58:45,282 INFO  StartupInfoLogger:61 - [] Started MultiwebsitesApplication in 11.774 seconds (JVM running for 13.732)
+2022-04-18 06:23:46,686 INFO  AbstractEntityManagerFactoryBean:648 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-18 06:23:46,700 INFO  ExecutorConfigurationSupport:218 - [] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-04-18 06:23:46,701 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2022-04-18 06:23:46,715 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
+2022-04-18 06:24:08,258 INFO  StartupInfoLogger:55 - [] Starting MultiwebsitesApplication using Java 18 on DESKTOP-CI469KC with PID 31768 (C:\Users\mss\Documents\spring\multiwebsites\target\classes started by mss in C:\Users\mss\Documents\spring\multiwebsites)
+2022-04-18 06:24:08,266 INFO  SpringApplication:660 - [] No active profile set, falling back to default profiles: default
+2022-04-18 06:24:11,581 INFO  RepositoryConfigurationDelegate:128 - [] Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2022-04-18 06:24:11,917 INFO  RepositoryConfigurationDelegate:188 - [] Finished Spring Data repository scanning in 318 ms. Found 17 JPA repository interfaces.
+2022-04-18 06:24:12,688 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350 - [] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@575cabf0' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-18 06:24:12,699 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350 - [] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-18 06:24:13,289 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 8089 (http)
+2022-04-18 06:24:13,311 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
+2022-04-18 06:24:13,313 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/9.0.39]
+2022-04-18 06:24:13,575 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
+2022-04-18 06:24:13,576 INFO  ServletWebServerApplicationContext:289 - [] Root WebApplicationContext: initialization completed in 5143 ms
+2022-04-18 06:24:13,997 WARN  JpaBaseConfiguration$JpaWebConfiguration:221 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-18 06:24:14,180 INFO  ExecutorConfigurationSupport:181 - [] Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-18 06:24:14,374 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-18 06:24:14,521 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.4.23.Final
+2022-04-18 06:24:14,925 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-18 06:24:15,198 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2022-04-18 06:24:15,725 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2022-04-18 06:24:15,760 INFO  Dialect:170 - [] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-04-18 06:24:16,551 INFO  EndpointLinksResolver:58 - [] Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-04-18 06:24:17,445 INFO  DefaultSecurityFilterChain:51 - [] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3dded90a, org.springframework.security.web.context.SecurityContextPersistenceFilter@be616f0, org.springframework.security.web.header.HeaderWriterFilter@40738846, org.springframework.web.filter.CorsFilter@7be3abaa, org.springframework.security.web.authentication.logout.LogoutFilter@3d764641, app.igesa.security.jwt.AuthTokenFilter@70c491b8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@cf08c97, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4b9f7edc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@29f8134, org.springframework.security.web.session.SessionManagementFilter@7c8df667, org.springframework.security.web.access.ExceptionTranslationFilter@738a39cc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3a48c398]
+2022-04-18 06:24:19,296 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-18 06:24:19,316 INFO  AbstractEntityManagerFactoryBean:434 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-18 06:24:20,264 INFO  TomcatWebServer:220 - [] Tomcat started on port(s): 8089 (http) with context path ''
+2022-04-18 06:24:22,082 INFO  DeferredRepositoryInitializationListener:51 - [] Triggering deferred initialization of Spring Data repositories…
+2022-04-18 06:24:23,726 INFO  DeferredRepositoryInitializationListener:55 - [] Spring Data repositories initialized!
+2022-04-18 06:24:23,755 INFO  StartupInfoLogger:61 - [] Started MultiwebsitesApplication in 16.626 seconds (JVM running for 19.347)
+2022-04-18 06:29:05,310 INFO  AbstractEntityManagerFactoryBean:648 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-18 06:29:05,315 INFO  ExecutorConfigurationSupport:218 - [] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-04-18 06:29:05,317 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2022-04-18 06:29:05,368 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
+2022-04-18 06:29:21,104 INFO  StartupInfoLogger:55 - [] Starting MultiwebsitesApplication using Java 18 on DESKTOP-CI469KC with PID 32416 (C:\Users\mss\Documents\spring\multiwebsites\target\classes started by mss in C:\Users\mss\Documents\spring\multiwebsites)
+2022-04-18 06:29:21,113 INFO  SpringApplication:660 - [] No active profile set, falling back to default profiles: default
+2022-04-18 06:29:23,710 INFO  RepositoryConfigurationDelegate:128 - [] Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2022-04-18 06:29:23,987 INFO  RepositoryConfigurationDelegate:188 - [] Finished Spring Data repository scanning in 265 ms. Found 17 JPA repository interfaces.
+2022-04-18 06:29:24,536 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350 - [] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@f171912' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-18 06:29:24,544 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350 - [] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-18 06:29:24,885 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 8089 (http)
+2022-04-18 06:29:24,896 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
+2022-04-18 06:29:24,897 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/9.0.39]
+2022-04-18 06:29:25,046 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
+2022-04-18 06:29:25,047 INFO  ServletWebServerApplicationContext:289 - [] Root WebApplicationContext: initialization completed in 3805 ms
+2022-04-18 06:29:25,396 WARN  JpaBaseConfiguration$JpaWebConfiguration:221 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-18 06:29:25,512 INFO  ExecutorConfigurationSupport:181 - [] Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-18 06:29:25,595 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-18 06:29:25,669 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.4.23.Final
+2022-04-18 06:29:25,848 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-18 06:29:26,003 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2022-04-18 06:29:26,407 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2022-04-18 06:29:26,435 INFO  Dialect:170 - [] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-04-18 06:29:27,253 INFO  EndpointLinksResolver:58 - [] Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-04-18 06:29:28,056 INFO  DefaultSecurityFilterChain:51 - [] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7402c49f, org.springframework.security.web.context.SecurityContextPersistenceFilter@11bfd751, org.springframework.security.web.header.HeaderWriterFilter@37c87fcc, org.springframework.web.filter.CorsFilter@5d22604e, org.springframework.security.web.authentication.logout.LogoutFilter@3cad24ae, app.igesa.security.jwt.AuthTokenFilter@49038f97, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2152fde5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@70f98f7a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2382b2f, org.springframework.security.web.session.SessionManagementFilter@718f3088, org.springframework.security.web.access.ExceptionTranslationFilter@498e41a4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@299eca90]
+2022-04-18 06:29:29,821 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-18 06:29:29,836 INFO  AbstractEntityManagerFactoryBean:434 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-18 06:29:30,531 INFO  TomcatWebServer:220 - [] Tomcat started on port(s): 8089 (http) with context path ''
+2022-04-18 06:29:31,915 INFO  DeferredRepositoryInitializationListener:51 - [] Triggering deferred initialization of Spring Data repositories…
+2022-04-18 06:29:33,012 INFO  DeferredRepositoryInitializationListener:55 - [] Spring Data repositories initialized!
+2022-04-18 06:29:33,030 INFO  StartupInfoLogger:61 - [] Started MultiwebsitesApplication in 12.839 seconds (JVM running for 15.663)
+2022-04-18 06:30:53,694 INFO  DirectJDKLog:173 - [] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-18 06:30:53,694 INFO  FrameworkServlet:525 - [] Initializing Servlet 'dispatcherServlet'
+2022-04-18 06:30:53,698 INFO  FrameworkServlet:547 - [] Completed initialization in 4 ms
+2022-04-18 08:26:01,964 INFO  AbstractEntityManagerFactoryBean:648 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-18 08:26:02,015 INFO  ExecutorConfigurationSupport:218 - [] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-04-18 08:26:02,017 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2022-04-18 08:26:02,063 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
+2022-04-18 08:26:28,808 INFO  StartupInfoLogger:55 - [] Starting MultiwebsitesApplication using Java 18 on DESKTOP-CI469KC with PID 31004 (C:\Users\mss\Documents\spring\multiwebsites\target\classes started by mss in C:\Users\mss\Documents\spring\multiwebsites)
+2022-04-18 08:26:28,815 INFO  SpringApplication:660 - [] No active profile set, falling back to default profiles: default
+2022-04-18 08:26:32,240 INFO  RepositoryConfigurationDelegate:128 - [] Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2022-04-18 08:26:32,556 INFO  RepositoryConfigurationDelegate:188 - [] Finished Spring Data repository scanning in 303 ms. Found 17 JPA repository interfaces.
+2022-04-18 08:26:33,219 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350 - [] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@feb098f' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-18 08:26:33,234 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350 - [] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-18 08:26:33,942 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 8089 (http)
+2022-04-18 08:26:33,962 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
+2022-04-18 08:26:33,964 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/9.0.39]
+2022-04-18 08:26:34,175 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
+2022-04-18 08:26:34,176 INFO  ServletWebServerApplicationContext:289 - [] Root WebApplicationContext: initialization completed in 5236 ms
+2022-04-18 08:26:34,652 WARN  JpaBaseConfiguration$JpaWebConfiguration:221 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-18 08:26:34,785 INFO  ExecutorConfigurationSupport:181 - [] Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-18 08:26:34,914 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-18 08:26:35,061 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.4.23.Final
+2022-04-18 08:26:35,762 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-18 08:26:36,370 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2022-04-18 08:26:36,908 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2022-04-18 08:26:36,955 INFO  Dialect:170 - [] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-04-18 08:26:38,224 INFO  EndpointLinksResolver:58 - [] Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-04-18 08:26:39,317 INFO  DefaultSecurityFilterChain:51 - [] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@67f8f5a6, org.springframework.security.web.context.SecurityContextPersistenceFilter@2d73767e, org.springframework.security.web.header.HeaderWriterFilter@2c54c497, org.springframework.web.filter.CorsFilter@141b011a, org.springframework.security.web.authentication.logout.LogoutFilter@4e96cb04, app.igesa.security.jwt.AuthTokenFilter@b428830, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d1cdeb1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ccfac29, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7976e536, org.springframework.security.web.session.SessionManagementFilter@bb50de6, org.springframework.security.web.access.ExceptionTranslationFilter@31533eb1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6c1f15df]
+2022-04-18 08:26:41,372 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-18 08:26:41,385 INFO  AbstractEntityManagerFactoryBean:434 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-18 08:26:42,131 INFO  TomcatWebServer:220 - [] Tomcat started on port(s): 8089 (http) with context path ''
+2022-04-18 08:26:44,395 INFO  DeferredRepositoryInitializationListener:51 - [] Triggering deferred initialization of Spring Data repositories…
+2022-04-18 08:26:46,042 INFO  DeferredRepositoryInitializationListener:55 - [] Spring Data repositories initialized!
+2022-04-18 08:26:46,075 INFO  StartupInfoLogger:61 - [] Started MultiwebsitesApplication in 18.167 seconds (JVM running for 20.111)

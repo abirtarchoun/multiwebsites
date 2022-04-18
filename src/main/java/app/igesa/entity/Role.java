@@ -23,14 +23,19 @@ public class Role extends Auditable<String> {
 		private ERole name;
 
 		public Role() {
-
+             super();
 		}
 
 		public Role(ERole name) {
 			this.name = name;
 		}
 
-		public Integer getId() {
+	public Role(String name) {
+		this.name= ERole.valueOf(name);
+	}
+
+
+	public Integer getId() {
 			return id;
 		}
 

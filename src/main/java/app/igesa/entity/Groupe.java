@@ -54,7 +54,14 @@ public class Groupe  extends Auditable<String> {
     @JoinColumn(name = "company_business_id")
     private CompanyBusiness companyBusiness;
 
+    public Groupe( String name, String description, boolean active, boolean confirmed, boolean deleted) {
 
+        this.name = name;
+        this.description = description;
+        this.active = active;
+        this.confirmed = confirmed;
+        this.deleted = deleted;
+    }
 }
 
 /*-------------------------------------------------------------------------------*/

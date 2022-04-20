@@ -22,7 +22,7 @@ public class SignupRequest {
     private Set<String> role;
 
 
-
+    @NotEmpty
     @Size(min = 6, message = "{Size.userDto.password}")
     private String password;
     @NotEmpty

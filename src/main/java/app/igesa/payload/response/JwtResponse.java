@@ -18,7 +18,7 @@ public class JwtResponse {
 	private String username;
 	private String email;
 	private String codefiscale;
-	private String password;
+	//private String password;
 	private List<String> roles;
 
 	public JwtResponse(String accessToken, Long id, String username, String email, List<String> roles,String codefiscale) {
@@ -75,11 +75,6 @@ public class JwtResponse {
 
 	public List<String> getRoles() {
 		return roles;
-	}
-	public  String getPassword(){return password;}
-
-	public void setPassword(String password) {
-		this.password = password;
 	}
 
 	public String getCodefiscale() {

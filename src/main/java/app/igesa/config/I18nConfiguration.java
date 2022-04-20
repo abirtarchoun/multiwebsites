@@ -1,4 +1,6 @@
+
 package app.igesa.config;
+
 
 import java.util.Locale;
 
@@ -9,7 +11,7 @@ import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 
-@Configuration
+//@Configuration
 public class I18nConfiguration  {
 
 	@Bean

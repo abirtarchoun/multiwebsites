@@ -1,21 +1,19 @@
 package app.igesa.controller;
 
 import app.igesa.entity.Account;
-import app.igesa.entity.Role;
 import app.igesa.metiers.AccountImp;
-import app.igesa.metiers.RoleImpl;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.Collection;
 import java.util.Optional;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 @RestController
 public class UserController {
@@ -32,8 +30,8 @@ public class UserController {
     @RequestMapping(value = "/user", method = RequestMethod.POST)
     @ApiOperation(value = "ADD User", notes = "SAUVGARDER USER", response = Account.class)
     @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "Entreprise was saved Successfully"),
-            @ApiResponse(code = 400, message = "Entreprise not valid"),
+            @ApiResponse(code = 200, message = "user was saved Successfully"),
+            @ApiResponse(code = 400, message = "user not valid"),
             @ApiResponse(code = 401, message = "Unauthorized , without authority or permission"),
             @ApiResponse(code = 403, message = "not permitted or allowed"),
 

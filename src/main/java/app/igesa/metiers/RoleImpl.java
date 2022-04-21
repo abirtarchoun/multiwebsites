@@ -2,13 +2,11 @@ package app.igesa.metiers;
 
 import java.util.List;
 import java.util.Optional;
-
 import app.igesa.repository.RoleRepository;
-//import app.igesa.validators.RoleValidator;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import app.igesa.entity.Role;
@@ -26,7 +24,9 @@ public class RoleImpl  implements Irole{
 
 @Override
     public Role save(Role r) {
-        return roleRepository.save(r);
+
+    log.debug("http post :: ");
+    return roleRepository.save(r);
       }
     @Override
     public Optional<Role> findById(Long id) {
@@ -45,8 +45,8 @@ public class RoleImpl  implements Irole{
     public Role update(Long id, Role r) {
        Role role = roleRepository.findById(id).orElseThrow(() -> new RuntimeException("Role introuvable avec id : : " +id));
         role.setName(r.getName());
-        final Role updated=  roleRepository.save(role);
-        return updated;
+       return roleRepository.save(role);
+
 
     }
 }

@@ -61,6 +61,7 @@ public class MultiwebsitesApplication implements CommandLineRunner {
 		user.setEmail("lucifero@mss.tn");
 		user.setMatchingPassword(encoder.encode("mss123#"));
 		user.setFiscaleCode("11397488");
+
 		//user.setGroupe(new Groupe("mss","mss",true,true,false));
 		userRepository.save(user);
 		iroleRepository.save(r1);

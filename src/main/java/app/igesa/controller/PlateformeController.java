@@ -3,20 +3,20 @@ package app.igesa.controller;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
-
 import app.igesa.dto.PlateformeDTO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import app.igesa.metiers.Iplateforme;
 import app.igesa.repository.IplateformeRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 @Api(tags = "PLATEFORME" )
 @RestController
 public class PlateformeController {

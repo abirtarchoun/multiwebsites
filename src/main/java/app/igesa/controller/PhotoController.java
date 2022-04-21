@@ -1,10 +1,7 @@
 package app.igesa.controller;
 
-import app.igesa.dto.PageDTO;
-import app.igesa.metiers.FlickrImpl;
 import app.igesa.strategy.StrategyPhotoContext;
 import com.flickr4java.flickr.FlickrException;
-import com.flickr4java.flickr.photos.Photo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;

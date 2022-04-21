@@ -1,9 +1,7 @@
 package app.igesa.controller;
 
 import app.igesa.dto.ConfigGeneralDTO;
-import app.igesa.dto.EntrepriseDTO;
 import app.igesa.metiers.Iconfiguration;
-import app.igesa.metiers.Ientreprise;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;

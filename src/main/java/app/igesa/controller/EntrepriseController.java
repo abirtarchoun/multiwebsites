@@ -3,7 +3,6 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Locale;
 import java.util.Optional;
-
 import app.igesa.dto.CompanyBusinessDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

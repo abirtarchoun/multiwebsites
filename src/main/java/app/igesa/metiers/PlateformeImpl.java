@@ -1,23 +1,19 @@
 package app.igesa.metiers;
 import java.util.Collection;
-import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 import app.igesa.dto.EntrepriseDTO;
 import app.igesa.dto.PlateformeDTO;
 import app.igesa.entity.Entreprise;
 import app.igesa.enumerations.ErrorCode;
-import app.igesa.exceptions.InvalideEntityException;
 import app.igesa.exceptions.ResourceNotFoundException;
 import app.igesa.repository.IentrepriseRepository;
-import app.igesa.validators.PlateformeValidator;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import app.igesa.entity.Plateforme;
 import app.igesa.repository.IplateformeRepository;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Service
 public class PlateformeImpl implements Iplateforme {

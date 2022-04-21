@@ -1,26 +1,20 @@
 package app.igesa.metiers;
-
-
 import app.igesa.dto.EntrepriseDTO;
-import app.igesa.dto.GroupeDTO;
 import app.igesa.dto.PageDTO;
 import app.igesa.entity.Entreprise;
-import app.igesa.entity.Groupe;
 import app.igesa.entity.Pages;
 import app.igesa.enumerations.ErrorCode;
 import app.igesa.exceptions.InvalideEntityException;
 import app.igesa.exceptions.ResourceNotFoundException;
 import app.igesa.repository.IentrepriseRepository;
 import app.igesa.repository.IpagesRepository;
-import app.igesa.validators.EntrepriseValidator;
 import app.igesa.validators.pageValidator;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;

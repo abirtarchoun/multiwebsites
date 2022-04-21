@@ -1,14 +1,12 @@
 package app.igesa.metiers;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.util.Collection;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
 import app.igesa.dto.CompanyBusinessDTO;
 import app.igesa.entity.CompanyBusiness;
 import app.igesa.repository.IcomapnybusRepository;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import app.igesa.dto.GroupeDTO;

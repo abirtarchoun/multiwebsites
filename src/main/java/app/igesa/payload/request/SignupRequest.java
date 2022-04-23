@@ -1,4 +1,5 @@
 package app.igesa.payload.request;
+import app.igesa.entity.Groupe;
 import app.igesa.validators.PasswordMatches;
 import lombok.*;
 
@@ -21,6 +22,8 @@ public class SignupRequest {
     
     private Set<String> role;
 
+    //private Groupe groupe ;
+
 
     @NotEmpty
     @Size(min = 6, message = "{Size.userDto.password}")
@@ -30,7 +33,7 @@ public class SignupRequest {
 
     private String fiscaleCode ;
 
-    
+
     public Set<String> getRole() {
       return this.role;
     }

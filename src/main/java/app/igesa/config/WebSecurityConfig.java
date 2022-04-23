@@ -21,6 +21,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 import org.springframework.security.web.server.authorization.AuthorizationWebFilter;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
 import javax.sql.DataSource;
 
@@ -71,6 +72,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			"/swagger-ui.html",
 			"/webjars/**"
 	};
+
+	public void addCorsMappings(CorsRegistry registry) {
+		registry.addMapping("/**")
+				.allowedOrigins("http://localhost:4200")
+				.allowedMethods("GET","POST","DELETE","OPTION","PUT");
+	}
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.httpBasic().disable().csrf().disable()
@@ -84,6 +91,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.authorizeRequests()
 				.antMatchers("/api/auth/**").permitAll()
 				.antMatchers("/api/test/**").permitAll()
+				.antMatchers("/**").permitAll()
+
 				.antMatchers(AUTH_WHITELIST).permitAll()
 				.anyRequest().authenticated().and()
 				.exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()

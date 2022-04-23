@@ -18,7 +18,7 @@ import app.igesa.metiers.IcompanyBusiness;
 
 
 
-
+@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 @RestController
 @Api(tags = "COMPANYBUSINESS")
 public class CompanyBusinessController {

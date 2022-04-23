@@ -17,6 +17,7 @@ import java.util.Locale;
 import java.util.Optional;
 
 
+@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 @RestController
 @Api(tags = "CONFIGURATION")
 public class ConfigurationController {

@@ -1,19 +1,15 @@
 package app.igesa.controller;
 
 import app.igesa.config.CaptchaService;
-import app.igesa.dto.CompanyBusinessDTO;
 import app.igesa.entity.Account;
 import app.igesa.entity.ERole;
 import app.igesa.entity.Role;
-import app.igesa.enumerations.ErrorCode;
-import app.igesa.exceptions.InvalideEntityException;
-import app.igesa.metiers.AccountImp;
 import app.igesa.metiers.UserDetailsImpl;
 import app.igesa.payload.request.LoginRequest;
 import app.igesa.payload.request.SignupRequest;
 import app.igesa.payload.response.JwtResponse;
 import app.igesa.payload.response.MessageResponse;
-import app.igesa.payload.response.RecaptchaResponse;
+import app.igesa.repository.IgroupeRepository;
 import app.igesa.repository.RoleRepository;
 import app.igesa.repository.UserRepository;
 import app.igesa.security.jwt.JwtUtils;
@@ -29,10 +25,10 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
-
 import javax.validation.Valid;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -43,7 +39,8 @@ import java.util.stream.Collectors;
 public class AuthController {
 	@Autowired
 	AuthenticationManager authenticationManager;
-
+     @Autowired
+	IgroupeRepository igroupeRepository;
 	@Autowired
 	UserRepository userRepository;
 
@@ -79,7 +76,6 @@ public class AuthController {
 		List<String> roles = userDetails.getAuthorities().stream()
 				.map(item -> item.getAuthority())
 				.collect(Collectors.toList());
-
 		/*boolean captchaVerified = captchaService.verify(loginRequest.getRecaptchaResponse());
 		if (!captchaVerified) {
 			throw new RuntimeException(" erreur captcha not valid");
@@ -88,6 +84,7 @@ public class AuthController {
 
 			return ResponseEntity.ok(" valid captcha");
 		}*/
+
 		return ResponseEntity.ok(new JwtResponse(jwt,
 				userDetails.getId(),
 				userDetails.getUsername(),

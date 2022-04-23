@@ -2,6 +2,8 @@ package app.igesa.entity;
 
 import javax.persistence.*;
 
+import app.igesa.enumerations.PagesTypes;
+import app.igesa.enumerations.RobotsTags;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -35,6 +37,6 @@ public class Meta  extends Auditable<String>{
 	@ManyToOne(fetch= FetchType.LAZY)
 	@JoinColumn(name = "product_id")
 	private Product product ;
-
-
+	private PagesTypes pagesTypes;
+	private RobotsTags robotsTags;
 }

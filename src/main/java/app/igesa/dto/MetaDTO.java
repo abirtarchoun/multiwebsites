@@ -1,7 +1,8 @@
 package app.igesa.dto;
 
-import app.igesa.entity.Groupe;
 import app.igesa.entity.Meta;
+import app.igesa.enumerations.PagesTypes;
+import app.igesa.enumerations.RobotsTags;
 import lombok.Builder;
 import lombok.Data;
 
@@ -14,8 +15,9 @@ public class MetaDTO {
 	private String metadescription ;
 	private String  urlkey;
 	private String metakey ;
-	//private PostDTO post;
+	private PagesTypes pagesTypes;
 	private ProductDTO product;
+	private RobotsTags robotsTags;
 
 
 	public static MetaDTO fromEntity(Meta meta ) {
@@ -26,6 +28,8 @@ public class MetaDTO {
 				.metatitle(meta.getMetatitle())
 				.metadescription(meta.getMetadescription())
 				.urlkey(meta.getUrlkey())
+				.pagesTypes(meta.getPagesTypes())
+				.robotsTags(meta.getRobotsTags())
 				.product(ProductDTO.fromEntity(meta.getProduct()))
 				.build();
 	}
@@ -40,6 +44,8 @@ public class MetaDTO {
 			meta.setMetatitle(dto.getMetatitle());
 			meta.setMetadescription(dto.getMetadescription());
 			meta.setUrlkey(dto.getUrlkey());
+			meta.setRobotsTags(dto.getRobotsTags());
+			meta.setPagesTypes(dto.getPagesTypes());
 			return meta;
 	}
 }

@@ -23,7 +23,11 @@ public class CompanyBusiness extends Auditable<String> {
 
 	@OneToMany(mappedBy="companyBusiness",cascade = CascadeType.ALL)
     private List<Groupe> groupe ;
-	
-	
 
+
+    public CompanyBusiness(String description ,String domainename) {
+        super();
+		this.description=description;
+		this.domainename=domainename;
+    }
 }

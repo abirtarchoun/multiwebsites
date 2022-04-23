@@ -1,5 +1,6 @@
 package app.igesa.payload.response;
 
+import app.igesa.entity.Groupe;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,6 +21,7 @@ public class JwtResponse {
 	private String codefiscale;
 	//private String password;
 	private List<String> roles;
+	//private Groupe groupe ;
 
 	public JwtResponse(String accessToken, Long id, String username, String email, List<String> roles,String codefiscale) {
 		this.token = accessToken;
@@ -28,9 +30,9 @@ public class JwtResponse {
 		this.email = email;
 		this.roles = roles;
 		this.codefiscale =codefiscale;
+		//this.groupe=groupe;
 
 	}
-
 
 
 	public String getAccessToken() {

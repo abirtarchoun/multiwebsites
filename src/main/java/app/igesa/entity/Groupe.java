@@ -45,7 +45,7 @@ public class Groupe  extends Auditable<String> {
 
     //Account
     @JsonIgnore
-    @OneToMany(mappedBy = "groupe", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "groupe")
     private List<Account> accounts;
 
 

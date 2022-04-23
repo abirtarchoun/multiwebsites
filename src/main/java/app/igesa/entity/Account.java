@@ -57,7 +57,7 @@ public class Account {
      this.fiscaleCode=fiscaleCode;
  }
 
-   @ManyToOne(cascade=CascadeType.ALL)
+   @ManyToOne(fetch= FetchType.LAZY)
     @JoinColumn(name = "groupe_id")
     private Groupe groupe ;
 

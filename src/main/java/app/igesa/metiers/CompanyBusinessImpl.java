@@ -2,11 +2,9 @@ package app.igesa.metiers;
 
 import java.util.Collection;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 import app.igesa.dto.CompanyBusinessDTO;
 import app.igesa.entity.CompanyBusiness;
-import app.igesa.entity.Groupe;
 import app.igesa.enumerations.ErrorCode;
 import app.igesa.exceptions.InvalideEntityException;
 import app.igesa.exceptions.ResourceNotFoundException;
@@ -75,10 +73,10 @@ public class CompanyBusinessImpl implements IcompanyBusiness {
 			log.error(" ENTREPRISE ID IS NULL ");
 			return;
 		}
-		Optional<Groupe> groupe = igroupeRepository.findById(id);
-		if (groupe.get().getId() != null) {
-			throw new InvalideEntityException("impossible de supprimer une company déja utilisé par un groupe ", ErrorCode.COMPANY_ALREADY_IN_USE);
-		}
+		//Optional<Groupe> groupe = igroupeRepository.findById(id);
+		//if (groupe.get().getId() != null) {
+		//	throw new InvalideEntityException("impossible de supprimer une company déja utilisé par un groupe ", ErrorCode.COMPANY_ALREADY_IN_USE);
+		//}
 
 		companybusinessRepository.deleteById(id);
 	}

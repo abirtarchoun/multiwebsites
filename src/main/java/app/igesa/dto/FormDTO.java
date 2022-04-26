@@ -5,6 +5,8 @@ import app.igesa.entity.FormEntity;
 import lombok.Builder;
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
 @Builder
 public class FormDTO {
@@ -17,6 +19,9 @@ public class FormDTO {
 	private String adresse ;
 	private String nationality ;
 	private String referent ;
+	protected Date createdDate;
+	protected Date lastModifiedDate;
+	protected String createdBy;
 	//private Product softwareused ;
 	private boolean status ;
 

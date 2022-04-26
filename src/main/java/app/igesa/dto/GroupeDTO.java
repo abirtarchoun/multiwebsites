@@ -1,20 +1,36 @@
 package app.igesa.dto;
 
+import java.util.Date;
 import java.util.List;
+
+import app.igesa.entity.Auditable;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import app.igesa.entity.Groupe;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.LastModifiedBy;
+import org.springframework.data.annotation.LastModifiedDate;
 
+import javax.persistence.Temporal;
+
+import static javax.persistence.TemporalType.TIMESTAMP;
+
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 @Builder
-public class GroupeDTO  {
+public class GroupeDTO {
     private Long id ; 
     private String name ;
     private String description ; 
     private boolean active ;
     private boolean confirmed;
     private boolean deleted ;
+    protected Date createdDate;
+    protected Date lastModifiedDate;
+    protected String createdBy;
     private CompanyBusinessDTO companyBusiness;
     
     @JsonIgnore
@@ -34,6 +50,9 @@ public class GroupeDTO  {
 				.confirmed(groupe.isConfirmed())
 				.deleted(groupe.isDeleted())
 				.description(groupe.getDescription())
+                .lastModifiedDate(groupe.getLastModifiedDate())
+                .createdDate(groupe.getLastModifiedDate())
+                .createdBy(groupe.getCreatedBy())
                 .companyBusiness(CompanyBusinessDTO.fromEntity(groupe.getCompanyBusiness()))
                 .build();
 				//boucle infini
@@ -54,6 +73,9 @@ public class GroupeDTO  {
            groupe.setConfirmed(dto.isConfirmed());
            groupe.setDeleted(dto.isDeleted());
            groupe.setDescription(dto.getDescription());
+           groupe.setLastModifiedDate(dto.getLastModifiedDate());
+           groupe.setCreatedDate(dto.getCreatedDate());
+           groupe.setCreatedDate(dto.getCreatedDate());
            groupe.setCompanyBusiness(CompanyBusinessDTO.toEntity(dto.getCompanyBusiness()));
           /* groupe.setEntreprise(dto.getEntreprise()!= null? dto.getEntreprise().stream().map(EntrepriseDTO::toEntity).collect(Collectors.toList()):null);
 		   */

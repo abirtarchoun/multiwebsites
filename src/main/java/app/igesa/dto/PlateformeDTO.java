@@ -5,6 +5,8 @@ import app.igesa.entity.Plateforme;
 import lombok.Builder;
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
 @Builder
 public class PlateformeDTO {
@@ -15,6 +17,9 @@ public class PlateformeDTO {
 	private String adresse ;
 	private Boolean published;
 	private EntrepriseDTO entreprise;
+	protected Date createdDate;
+	protected Date lastModifiedDate;
+	protected String createdBy;
 	public static PlateformeDTO fromEntity(Plateforme plateforme) {
     	if ( plateforme == null) {
     		return null;

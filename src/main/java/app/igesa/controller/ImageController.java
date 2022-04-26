@@ -12,8 +12,7 @@ import java.io.IOException;
 import java.util.Optional;
 
 @RestController
-//@CrossOrigin(origins = "http://localhost:8082") open for specific port
-@CrossOrigin() // open for all ports
+@CrossOrigin(origins = "*", maxAge = 3600)
 public class ImageController {
 
     @Autowired

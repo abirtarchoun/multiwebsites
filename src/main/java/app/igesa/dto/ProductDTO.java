@@ -10,6 +10,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Builder;
 import lombok.Data;
 
+import java.util.Date;
 import java.util.List;
 
 @Builder
@@ -22,6 +23,9 @@ public class ProductDTO {
 	private String note ;
 	private String name ;
 	private TagsDTO tags ;
+	protected Date createdDate;
+	protected Date lastModifiedDate;
+	protected String createdBy;
 	private  int consultationNumber ;
 	private CategoryDTO category;
 	private EntrepriseDTO entreprise ;

@@ -17,6 +17,7 @@ import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @Api(tags = "PRODUCT")
 public class ProductController {

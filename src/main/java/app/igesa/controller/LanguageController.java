@@ -15,6 +15,7 @@ import org.slf4j.LoggerFactory;
 
 
 
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @Api(tags = "LANGUAGE")
 public class LanguageController {

@@ -1,5 +1,6 @@
 package app.igesa.dto;
 
+import java.util.Date;
 import java.util.List;
 
 import app.igesa.entity.Auditable;
@@ -20,6 +21,9 @@ public class CompanyBusinessDTO {
     private Long id ;
 	private String description ; 
 	private String domainename ;
+	protected Date createdDate;
+	protected Date lastModifiedDate;
+	//protected String createdBy;
 	@JsonIgnore
 	private List<GroupeDTO>groupe ;
 
@@ -32,7 +36,9 @@ public class CompanyBusinessDTO {
 				.id(company.getId())
 				.description(company.getDescription())
 				.domainename(company.getDomainename())
-
+				//.createdBy(company.getCreatedBy())
+				.lastModifiedDate(company.getLastModifiedDate())
+				.createdDate(company.getCreatedDate())
 				.build();
 	}
 
@@ -46,6 +52,8 @@ public class CompanyBusinessDTO {
 		company.setId(dto.getId());
 		company.setDescription(dto.getDescription());
 		company.setDomainename(dto.getDomainename());
+		company.setCreatedDate(dto.getCreatedDate());
+		company.setLastModifiedDate(dto.getLastModifiedDate());
 		return company;
 	}
 

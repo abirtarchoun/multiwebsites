@@ -17,6 +17,7 @@ import app.igesa.repository.IplateformeRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+@CrossOrigin(origins = "*", maxAge = 3600)
 @Api(tags = "PLATEFORME" )
 @RestController
 public class PlateformeController {

@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Builder;
 import lombok.Data;
 
+import java.util.Date;
 import java.util.List;
 
 
@@ -19,6 +20,9 @@ public class EntrepriseDTO {
 	private String note ;
 	private String companyname ;
 	private GroupeDTO groupe;
+	protected Date createdDate;
+	protected Date lastModifiedDate;
+	//protected String createdBy;
 	@JsonIgnore
 	private List<ConfigGeneralDTO> config ;
 	
@@ -35,6 +39,8 @@ public class EntrepriseDTO {
 				.fax(entreprise.getFax())
 				.note(entreprise.getNote())
 				.phone(entreprise.getPhone())
+				.createdDate(entreprise.getCreatedDate())
+				.lastModifiedDate(entreprise.getLastModifiedDate())
 				.groupe(GroupeDTO.fromEntity(entreprise.getGroupe()))
 				.build();
     }
@@ -53,6 +59,8 @@ public class EntrepriseDTO {
 			    entreprise.setFax(dto.getFax());
 			    entreprise.setNote(dto.getNote());
 				entreprise.setPhone(dto.getPhone());
+				entreprise.setCreatedDate(dto.getCreatedDate());
+				entreprise.setLastModifiedDate(dto.getLastModifiedDate());
 				entreprise.setGroupe(GroupeDTO.toEntity(dto.getGroupe()));
 				return entreprise;
     }

@@ -7,6 +7,8 @@ import app.igesa.enumerations.Types;
 import lombok.Builder;
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
 @Builder
 public class PostDTO {
@@ -21,6 +23,9 @@ public class PostDTO {
 	private String content ;
 	private PageDTO page ;
 	private TagsDTO tags;
+	protected Date createdDate;
+	protected Date lastModifiedDate;
+	protected String createdBy;
 	private Enum<Types> types;
 
 	public static PostDTO fromEntity(Post post) {

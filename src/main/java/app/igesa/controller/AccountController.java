@@ -16,14 +16,14 @@ import org.slf4j.LoggerFactory;
 
 
 @RestController
-public class UserController {
+public class AccountController {
 
     @Autowired
     AccountImp accountImpService ;
 
 
 
-    private static final Logger log = LoggerFactory.getLogger(UserController.class);
+    private static final Logger log = LoggerFactory.getLogger(AccountController.class);
 
 
 
@@ -80,8 +80,8 @@ public class UserController {
             @ApiResponse(code = 403, message = "not permitted or allowed"),
 
     })
-    public ResponseEntity<Account> update(@RequestBody Account user , @PathVariable Long id) {
-        return new ResponseEntity<>(accountImpService.update(id,user),HttpStatus.CREATED);
+    public ResponseEntity<Account> update(@RequestBody Account user ) {
+        return new ResponseEntity<>(accountImpService.save(user),HttpStatus.CREATED);
     }
 
     @RequestMapping(value = "/user/{id}", method = RequestMethod.DELETE)

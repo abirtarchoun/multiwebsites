@@ -1,9 +1,12 @@
 package app.igesa.controller;
 
 import app.igesa.config.CaptchaService;
+import app.igesa.dto.GroupeDTO;
 import app.igesa.entity.Account;
 import app.igesa.entity.ERole;
+import app.igesa.entity.Groupe;
 import app.igesa.entity.Role;
+import app.igesa.dto.GroupeDTO;
 import app.igesa.metiers.UserDetailsImpl;
 import app.igesa.payload.request.LoginRequest;
 import app.igesa.payload.request.SignupRequest;
@@ -11,7 +14,7 @@ import app.igesa.payload.response.JwtResponse;
 import app.igesa.payload.response.MessageResponse;
 import app.igesa.repository.IgroupeRepository;
 import app.igesa.repository.RoleRepository;
-import app.igesa.repository.UserRepository;
+import app.igesa.repository.AccountRepository;
 import app.igesa.security.jwt.JwtUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -39,13 +42,13 @@ import java.util.stream.Collectors;
 public class AuthController {
 	@Autowired
 	AuthenticationManager authenticationManager;
-     @Autowired
-	IgroupeRepository igroupeRepository;
 	@Autowired
-	UserRepository userRepository;
+	AccountRepository userRepository;
 
 	@Autowired
 	RoleRepository roleRepository;
+	@Autowired
+	IgroupeRepository igroupeRepository;
 
 	@Autowired
 	PasswordEncoder encoder;
@@ -56,12 +59,12 @@ public class AuthController {
 	private CaptchaService captchaService;
 
 	@PostMapping("/signin")
-	@ApiOperation(value="Signin",notes="login  ", response = LoginRequest.class)
-	@ApiResponses(value= {
-			@ApiResponse(code=200,message="signin sucessfully"),
-			@ApiResponse(code=400,message="bad resquest"),
-			@ApiResponse(code=401,message="Unauthorized , without authority or permission"),
-			@ApiResponse( code=403, message="not permitted or allowed"),
+	@ApiOperation(value = "Signin", notes = "login  ", response = LoginRequest.class)
+	@ApiResponses(value = {
+			@ApiResponse(code = 200, message = "signin sucessfully"),
+			@ApiResponse(code = 400, message = "bad resquest"),
+			@ApiResponse(code = 401, message = "Unauthorized , without authority or permission"),
+			@ApiResponse(code = 403, message = "not permitted or allowed"),
 
 	})
 	public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
@@ -89,17 +92,17 @@ public class AuthController {
 				userDetails.getId(),
 				userDetails.getUsername(),
 				userDetails.getEmail(),
-				roles, userDetails.getCodefiscale()));
+				roles, userDetails.getFiscaleCode()));
 	}
 
 
 	@PostMapping("/signup")
-	@ApiOperation(value="Signin",notes="login  ", response = SignupRequest.class)
-	@ApiResponses(value= {
-			@ApiResponse(code=200,message="registred sucessfully"),
-			@ApiResponse(code=400,message="bad resquest"),
-			@ApiResponse(code=401,message="Unauthorized , without authority or permission"),
-			@ApiResponse( code=403, message="not permitted or allowed"),
+	@ApiOperation(value = "Signin", notes = "login  ", response = SignupRequest.class)
+	@ApiResponses(value = {
+			@ApiResponse(code = 200, message = "registred sucessfully"),
+			@ApiResponse(code = 400, message = "bad resquest"),
+			@ApiResponse(code = 401, message = "Unauthorized , without authority or permission"),
+			@ApiResponse(code = 403, message = "not permitted or allowed"),
 
 	})
 	public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
@@ -118,9 +121,14 @@ public class AuthController {
 
 		// Create new user's account
 		Account user = new Account(signUpRequest.getUsername(),
-							 signUpRequest.getEmail(),
-							 encoder.encode(signUpRequest.getPassword()), encoder.encode(signUpRequest.getMatchingPassword()), signUpRequest.getFiscaleCode());
+				signUpRequest.getEmail(),
+				encoder.encode(signUpRequest.getPassword()), encoder.encode(signUpRequest.getMatchingPassword()), signUpRequest.getFiscaleCode());
 
+		/*Optional<Groupe> groupe = igroupeRepository.findById(user.getGroupe().getId());
+		if (groupe.isPresent()) {
+
+			user.setGroupe(groupe.get());
+		}*/
 
 
 		Set<String> strRoles = signUpRequest.getRole();

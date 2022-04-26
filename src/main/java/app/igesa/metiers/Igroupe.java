@@ -10,6 +10,5 @@ public interface Igroupe {
 	public GroupeDTO findById(Long id);
 	public void delete(Long id);
 	GroupeDTO findAllById(Long id);
-
-
+     public void deleteAll();
 }

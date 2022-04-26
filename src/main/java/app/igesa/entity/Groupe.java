@@ -8,7 +8,6 @@ import lombok.*;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 
-@NoArgsConstructor
 @AllArgsConstructor
 @Data
 @Entity
@@ -62,6 +61,11 @@ public class Groupe  extends Auditable<String> {
         this.confirmed = confirmed;
         this.deleted = deleted;
     }
-}
 
-/*-------------------------------------------------------------------------------*/
+    public Groupe(boolean active){
+        this.active=active;
+    }
+public Groupe(){
+    super();
+}
+}

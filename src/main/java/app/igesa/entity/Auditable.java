@@ -25,8 +25,6 @@ public abstract class Auditable<U> {
     @Temporal(TIMESTAMP)
     protected Date createdDate;
 
-    @LastModifiedBy
-    protected U lastModifiedBy;
 
     @LastModifiedDate
     @Temporal(TIMESTAMP)
@@ -48,13 +46,6 @@ public abstract class Auditable<U> {
         this.createdDate = createdDate;
     }
 
-    public U getLastModifiedBy() {
-        return lastModifiedBy;
-    }
-
-    public void setLastModifiedBy(U lastModifiedBy) {
-        this.lastModifiedBy = lastModifiedBy;
-    }
 
     public Date getLastModifiedDate() {
         return lastModifiedDate;

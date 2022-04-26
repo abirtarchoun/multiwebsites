@@ -93,7 +93,12 @@ public class GroupeImpl implements Igroupe {
 						ErrorCode.GROUPE_NOT_FOUND));
 
 	}
+
+	@Override
+	public void deleteAll() {
+		groupeRepository.deleteAll();
 	}
+}
 
 
 

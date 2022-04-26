@@ -6,6 +6,8 @@ import app.igesa.enumerations.RobotsTags;
 import lombok.Builder;
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
 @Builder
 public class MetaDTO {
@@ -15,6 +17,9 @@ public class MetaDTO {
 	private String metadescription ;
 	private String  urlkey;
 	private String metakey ;
+	protected Date createdDate;
+	protected Date lastModifiedDate;
+	protected String createdBy;
 	private PagesTypes pagesTypes;
 	private ProductDTO product;
 	private RobotsTags robotsTags;

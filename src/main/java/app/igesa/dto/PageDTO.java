@@ -6,6 +6,8 @@ import app.igesa.entity.Pages;
 import lombok.Builder;
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
 @Builder
 public class PageDTO {
@@ -14,6 +16,9 @@ public class PageDTO {
 	private String description ;
 	private boolean published ;
 	private EntrepriseDTO entreprise;
+	protected Date createdDate;
+	protected Date lastModifiedDate;
+	protected String createdBy;
 	//private PageTranslate transInfo ;
 
 

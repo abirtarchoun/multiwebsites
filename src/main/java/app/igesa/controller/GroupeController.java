@@ -1,7 +1,13 @@
 package app.igesa.controller;
+import app.igesa.dto.EntrepriseDTO;
+import app.igesa.entity.Groupe;
+import app.igesa.repository.IgroupeRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -14,17 +20,16 @@ import app.igesa.dto.GroupeDTO;
 import app.igesa.metiers.Igroupe;
 
 @RestController
+
+@CrossOrigin(origins = "*", maxAge = 3600)
 @Api(tags = "GROUPE")
 public class GroupeController {
 	
 	private static final Logger log = LoggerFactory.getLogger(GroupeController.class);
 	@Autowired
 	private Igroupe groupeservice;
-
-	public GroupeController(Igroupe groupeservice) {
-		super();
-		this.groupeservice = groupeservice;
-	}
+	@Autowired
+	private IgroupeRepository igroupeRepository;
 	
 
 	@RequestMapping(value="/groupe",method =RequestMethod.POST)
@@ -96,16 +101,81 @@ public class GroupeController {
 		log.debug(" HTTP PUT {}");
 		return new ResponseEntity<>(groupeservice.save(g), HttpStatus.CREATED);
 	}
-	@RequestMapping(value="/groupe/ALL",method =RequestMethod.GET)
-	@ApiOperation(value="UPDATE GROUPE BY ID ",response = GroupeDTO.class)
+
+
+	@RequestMapping(value="/groupe/active",method =RequestMethod.GET)
+	@ApiOperation(value="find by active groupe ",response = GroupeDTO.class)
 	@ApiResponses(value= {
-			@ApiResponse(code = 200, message = "Groupe was updated successfully"),
+			@ApiResponse(code = 200, message = "Groupe was fouded successfully"),
 			@ApiResponse(code = 401, message = "Unauthorized , without authority or permission"),
 			@ApiResponse(code = 403, message = "not permitted or allowed"),
 	})
+	public ResponseEntity<List<GroupeDTO>> findByActive() {
+		try {
+			List<GroupeDTO> groupes = igroupeRepository.findByActive(true).stream().map(GroupeDTO::fromEntity).collect(Collectors.toList());
+			if (groupes.isEmpty()) {
+				return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+			}
+			return new ResponseEntity<>(groupes, HttpStatus.OK);
+		} catch (Exception e) {
+			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+	}
+	@RequestMapping(value="/groupe/confirmed",method =RequestMethod.GET)
+	@ApiOperation(value=" find by confirmed   groupe",response = GroupeDTO.class)
+	@ApiResponses(value= {
+			@ApiResponse(code = 200, message = "Groupe was founded successfully"),
+			@ApiResponse(code = 401, message = "Unauthorized , without authority or permission"),
+			@ApiResponse(code = 403, message = "not permitted or allowed"),
+	})
+	public ResponseEntity<List<GroupeDTO>> findByConfirmed() {
+		try {
+			List<GroupeDTO> groupes = igroupeRepository.findByConfirmed(true).stream().map(GroupeDTO::fromEntity).collect(Collectors.toList());
+			if (groupes.isEmpty()) {
+				return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+			}
+			return new ResponseEntity<>(groupes, HttpStatus.OK);
+		} catch (Exception e) {
+			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+	}
 
 
-	public GroupeDTO findAllById(@PathVariable Long id) {
-		return groupeservice.findAllById(id);
+	@RequestMapping(value="/groupe/deleted",method =RequestMethod.GET)
+	@ApiOperation(value=" find by deleted   groupe",response = GroupeDTO.class)
+	@ApiResponses(value= {
+			@ApiResponse(code = 200, message = "Groupe was founded successfully"),
+			@ApiResponse(code = 401, message = "Unauthorized , without authority or permission"),
+			@ApiResponse(code = 403, message = "not permitted or allowed"),
+	})
+	public ResponseEntity<List<GroupeDTO>> findByDeleted() {
+		try {
+			List<GroupeDTO> groupes = igroupeRepository.findByDeleted(true).stream().map(GroupeDTO::fromEntity).collect(Collectors.toList());
+			if (groupes.isEmpty()) {
+				return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+			}
+			return new ResponseEntity<>(groupes, HttpStatus.OK);
+		} catch (Exception e) {
+			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+	}
+
+
+
+	@RequestMapping(value="/groupe",method =RequestMethod.DELETE)
+	@ApiOperation(value=" delete all groupes ",response = GroupeDTO.class)
+	@ApiResponses(value= {
+			@ApiResponse(code = 200, message = "all groupes was deleted successfully"),
+			@ApiResponse(code = 401, message = "Unauthorized , without authority or permission"),
+			@ApiResponse(code = 403, message = "not permitted or allowed"),
+	})
+	public ResponseEntity<HttpStatus> deleteAll() {
+		try {
+			groupeservice.deleteAll();
+			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+		} catch (Exception e) {
+			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+
 	}
 }

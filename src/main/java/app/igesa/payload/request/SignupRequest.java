@@ -17,7 +17,7 @@ public class SignupRequest {
     @NotEmpty
     private String username;
  
-@NotEmpty
+    @NotEmpty
     private String email;
     
     private Set<String> role;
@@ -30,14 +30,22 @@ public class SignupRequest {
     private String password;
     @NotEmpty
     private String matchingPassword;
-
+    @NotEmpty
     private String fiscaleCode ;
 
 
     public Set<String> getRole() {
       return this.role;
     }
-    
+
+    public String getFiscaleCode() {
+        return fiscaleCode;
+    }
+
+    public void setFiscaleCode(String fiscaleCode) {
+        this.fiscaleCode = fiscaleCode;
+    }
+
     public void setRole(Set<String> role) {
       this.role = role;
     }

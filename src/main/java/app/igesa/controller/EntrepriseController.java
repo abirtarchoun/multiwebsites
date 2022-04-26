@@ -1,9 +1,7 @@
 package app.igesa.controller;
 import java.util.Collection;
 import java.util.List;
-import java.util.Locale;
 import java.util.Optional;
-import app.igesa.dto.CompanyBusinessDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +17,7 @@ import io.swagger.annotations.ApiResponses;
 
 
 
-
+@CrossOrigin(origins = "*", maxAge = 3600)
 @Api(tags = "ENTREPRISE")
 @RestController
 public class EntrepriseController {

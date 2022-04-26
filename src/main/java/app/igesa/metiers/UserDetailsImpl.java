@@ -31,25 +31,25 @@ public class UserDetailsImpl implements UserDetails {
 	@JsonIgnore
 	private String password;
 
-	private String codefiscale ;
+	private String fiscaleCode ;
 
 
 
 	private Collection<? extends GrantedAuthority> authorities;
 
 
-	public static UserDetailsImpl build(Account user) {
-		List<GrantedAuthority> authorities = user.getRoles().stream()
+	public static UserDetailsImpl build(Account account) {
+		List<GrantedAuthority> authorities = account.getRoles().stream()
 				.map(role -> new SimpleGrantedAuthority(role.getName().name()))
 				.collect(Collectors.toList());
 
 
 		return new UserDetailsImpl(
-				user.getId(), 
-				user.getUsername(), 
-				user.getEmail(),
-				user.getPassword(),
-				user.getFiscaleCode(),
+				account.getId(),
+				account.getUsername(),
+				account.getEmail(),
+				account.getPassword(),
+				account.getFiscaleCode(),
 				authorities);
 	}
 
@@ -76,6 +76,10 @@ public class UserDetailsImpl implements UserDetails {
 		return username;
 	}
 
+
+	public String getFiscaleCode() {
+		return fiscaleCode;
+	}
 
 	@Override
 	public boolean isAccountNonExpired() {

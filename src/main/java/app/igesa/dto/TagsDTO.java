@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Builder;
 import lombok.Data;
 
+import java.util.Date;
 import java.util.List;
 
 @Builder
@@ -12,6 +13,9 @@ public class TagsDTO {
 	private Long id ;
 	private String name ;
 	private String description ;
+	protected Date createdDate;
+	protected Date lastModifiedDate;
+	protected String createdBy;
 	@JsonIgnore
 	private List<PostDTO> pots;
 	@JsonIgnore

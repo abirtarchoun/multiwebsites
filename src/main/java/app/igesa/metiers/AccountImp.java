@@ -23,8 +23,9 @@ public class AccountImp {
 
 
     public Account save(Account account) {
+
         Optional<Groupe> groupe = igroupeRepository.findById(account.getGroupe().getId());
-        if(groupe.isPresent()) {
+        if (groupe.isPresent()) {
             account.setGroupe((groupe.get()));
         }
         return userRepository.save(account);
@@ -41,7 +42,4 @@ public class AccountImp {
     public void delete(Long id) {
         userRepository.deleteById(id);
     }
-
-
-
 }

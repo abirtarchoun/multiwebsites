@@ -35,12 +35,16 @@ public class Post extends Auditable<String>{
 	@OneToMany(mappedBy="post",cascade = CascadeType.ALL)
 	 private List<PostTranslation> postTranslations;
 
+	@Column(name="title")
 	private String title ;
 
+	@Column(name="description")
 	private String description;
 
+	@Column(name="content")
 	private String content ;
 
+	@Column(name="slug")
 	private String slug ;
 
 	private String subtitle ;

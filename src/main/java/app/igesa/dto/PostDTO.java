@@ -1,7 +1,5 @@
 package app.igesa.dto;
 
-
-import app.igesa.entity.Entreprise;
 import app.igesa.entity.Post;
 import app.igesa.enumerations.Types;
 import lombok.Builder;

@@ -1,12 +1,9 @@
 package app.igesa.controller;
 
 import app.igesa.config.CaptchaService;
-import app.igesa.dto.GroupeDTO;
 import app.igesa.entity.Account;
 import app.igesa.entity.ERole;
-import app.igesa.entity.Groupe;
 import app.igesa.entity.Role;
-import app.igesa.dto.GroupeDTO;
 import app.igesa.metiers.UserDetailsImpl;
 import app.igesa.payload.request.LoginRequest;
 import app.igesa.payload.request.SignupRequest;
@@ -31,7 +28,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 

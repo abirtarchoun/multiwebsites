@@ -80,7 +80,7 @@ public class CompanyBusinessController {
     @RequestMapping(value="/company",method =RequestMethod.PUT)
     @ApiOperation(value="UPDATE COMPANY BUSINESS BY ID ",response = CompanyBusinessDTO.class)
     @ApiResponses(value= {
-            @ApiResponse(code=200,message="FORMENTITY  was updated successfully"),
+            @ApiResponse(code=200,message="companyBusines  was updated successfully"),
             @ApiResponse(code=401,message="Unauthorized , without authority or permission"),
             @ApiResponse( code=403, message="not permitted or allowed"),
 

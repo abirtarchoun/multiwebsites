@@ -57,7 +57,20 @@ public class Account {
      this.fiscaleCode=fiscaleCode;
  }
 
-   @ManyToOne(fetch= FetchType.LAZY)
+
+    public Account( String username, String email, String password, String matchingPassword,Set<Role> roles , String fiscaleCode){
+        super();
+        this.username=username;
+        this.email=email;
+        this.password=password;
+        this.matchingPassword=matchingPassword;
+        this.fiscaleCode=fiscaleCode;
+        this.roles=roles;
+    }
+
+
+
+    @ManyToOne(fetch= FetchType.LAZY)
     @JoinColumn(name = "groupe_id")
     private Groupe groupe ;
 
